@@ -1,344 +1,785 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bichou Accessories | إكسسوارات نسائية فاخرة</title>
-<meta name="description" content="بلاكيور مضمون مقاوم للصدأ، توصيل مجاني لجميع مدن المغرب والدفع بعد معاينة المنتج.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --cream:#FBF7EF; --ivory:#FFFFFF; --gold:#D4AF37; --gold-deep:#A98516;
-  --black:#0B0B0B; --ink:#2A2620; --muted:#6F675A; --line:#E9DFC6;
-  --err:#B3261E;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Tajawal',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:17px}
-img{max-width:100%;display:block}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bichou Accessories | إكسسوارات نسائية فاخرة</title>
+  <meta name="description" content="بلاكيور مضمون مقاوم للصدأ، توصيل مجاني لجميع مدن المغرب والدفع بعد معاينة المنتج.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FBF7EF;
+      --ivory: #FFFFFF;
+      --gold: #D4AF37;
+      --gold-deep: #A98516;
+      --black: #0B0B0B;
+      --ink: #2A2620;
+      --muted: #6F675A;
+      --line: #E9DFC6;
+      --err: #B3261E;
+    }
 
-/* Header */
-.topbar{background:var(--black);color:var(--gold);text-align:center;font-size:14.5px;font-weight:500;padding:9px 16px}
-header.main{background:var(--ivory);border-bottom:1px solid var(--line)}
-header.main .wrap{display:flex;align-items:center;justify-content:center;padding-top:16px;padding-bottom:16px}
-.logo{font-family:'Tajawal',sans-serif;font-weight:800;font-size:28px;letter-spacing:.04em;direction:ltr;color:var(--black)}
-.logo span{color:var(--gold)}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
-/* Hero */
-.hero{padding:56px 0 40px}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
-.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.25;font-weight:800;color:var(--black)}
-.hero p{margin:18px 0 28px;color:var(--muted);max-width:30em;font-size:18px}
-.btn{display:inline-block;border:0;cursor:pointer;font-family:inherit;font-weight:700;text-decoration:none;border-radius:999px;transition:transform .15s,background .15s}
-.btn-gold{background:linear-gradient(135deg,#E6C556,var(--gold) 55%,var(--gold-deep));color:var(--black);padding:15px 34px;font-size:18px;box-shadow:0 8px 22px rgba(212,175,55,.35)}
-.btn-gold:hover{transform:translateY(-2px)}
-.hero-img{position:relative;border-radius:200px 200px 24px 24px;overflow:hidden;border:1px solid var(--gold);aspect-ratio:4/5;background:#efe6cf}
-.hero-img img{width:100%;height:100%;object-fit:cover}
+    html {
+      scroll-behavior: smooth
+    }
 
-/* Packs */
-section{padding:56px 0}
-.sec-title{text-align:center;margin-bottom:36px}
-.sec-title h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;color:var(--black)}
-.sec-title p{color:var(--muted);margin-top:6px}
-.rule{width:64px;height:3px;background:var(--gold);margin:14px auto 0;border-radius:2px}
-.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.pack{position:relative;background:var(--ivory);border:1.5px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
-.pack.selected{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.28),0 14px 34px rgba(0,0,0,.08)}
-.pack .img{aspect-ratio:1/1;background:#f3ead3;overflow:hidden}
-.pack .img img{width:100%;height:100%;object-fit:cover}
-.pack .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
-.pack h3{font-size:20px;font-weight:700;color:var(--black);line-height:1.4}
-.pack .desc{color:var(--muted);font-size:15px;flex:1}
-.price{font-size:30px;font-weight:800;color:var(--gold-deep)}
-.price small{font-size:16px;font-weight:700;margin-inline-start:4px}
-.badge{position:absolute;top:14px;right:14px;background:var(--black);color:var(--gold);font-weight:700;font-size:13.5px;padding:5px 14px;border-radius:999px;z-index:2}
-.pick{width:100%;padding:13px;border-radius:12px;font-size:16.5px;background:var(--black);color:var(--gold)}
-.pick:hover{background:#26210f}
-.pack.selected .pick{background:var(--gold);color:var(--black)}
+    body {
+      font-family: 'Tajawal', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 17px
+    }
 
-/* Trust */
-.trust{background:var(--black);color:#fff}
-.trust .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.t-item{text-align:center;padding:8px 10px}
-.t-item svg{width:44px;height:44px;stroke:var(--gold);fill:none;stroke-width:1.6;margin-bottom:12px}
-.t-item h3{color:var(--gold);font-size:19px;margin-bottom:4px}
-.t-item p{color:#d9d2bf;font-size:15.5px}
+    img {
+      max-width: 100%;
+      display: block
+    }
 
-/* Form */
-.order{max-width:600px;margin:0 auto;background:var(--ivory);border:1px solid var(--gold);border-radius:24px;padding:32px 28px;box-shadow:0 18px 44px rgba(0,0,0,.07)}
-.field{margin-bottom:16px}
-label{display:block;font-weight:700;margin-bottom:6px;font-size:15.5px}
-input,select{width:100%;font-family:inherit;font-size:16.5px;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
-input:focus,select:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(212,175,55,.25)}
-input[readonly]{background:#FBF4DD;font-weight:700}
-.field.invalid input{border-color:var(--err)}
-.err{display:none;color:var(--err);font-size:14px;margin-top:4px}
-.field.invalid .err{display:block}
-.summary{display:flex;justify-content:space-between;align-items:center;background:#FBF4DD;border-radius:12px;padding:12px 16px;margin:6px 0 18px;font-weight:700}
-.summary b{color:var(--gold-deep);font-size:22px}
-.submit{width:100%;padding:17px;font-size:20px}
-.submit[disabled]{opacity:.65;cursor:wait}
-.form-msg{display:none;margin-top:14px;padding:12px 14px;border-radius:12px;background:#FCE9E7;color:var(--err);font-size:15px}
-.note{text-align:center;color:var(--muted);font-size:14px;margin-top:12px}
-.success{display:none;text-align:center;padding:18px 6px}
-.success .tick{width:76px;height:76px;margin:0 auto 16px;border-radius:50%;background:linear-gradient(135deg,#E6C556,var(--gold-deep));display:grid;place-items:center}
-.success .tick svg{width:38px;height:38px;stroke:var(--black);fill:none;stroke-width:3}
-.success h3{font-size:26px;color:var(--black);margin-bottom:8px}
-.success p{color:var(--muted)}
-.order.done form{display:none}
-.order.done .success{display:block}
+    a {
+      color: inherit
+    }
 
-footer{background:var(--black);color:#bdb59f;text-align:center;padding:26px 16px;font-size:14.5px}
-footer b{color:var(--gold);direction:ltr;unicode-bidi:isolate}
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px
+    }
 
-@media(max-width:860px){
-  .hero .wrap{grid-template-columns:1fr;text-align:center}
-  .hero p{margin-inline:auto}
-  .hero-img{max-width:380px;margin:0 auto;order:-1}
-  .packs,.trust .grid{grid-template-columns:1fr}
-  .packs{max-width:440px;margin:0 auto}
-}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style>
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    /* Header */
+    .topbar {
+      background: var(--black);
+      color: var(--gold);
+      text-align: center;
+      font-size: 14.5px;
+      font-weight: 500;
+      padding: 9px 16px
+    }
+
+    header.main {
+      background: var(--ivory);
+      border-bottom: 1px solid var(--line)
+    }
+
+    header.main .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 16px;
+      padding-bottom: 16px
+    }
+
+    .logo {
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: .04em;
+      direction: ltr;
+      color: var(--black)
+    }
+
+    .logo span {
+      color: var(--gold)
+    }
+
+    /* Hero */
+    .hero {
+      padding: 56px 0 40px
+    }
+
+    .hero .wrap {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 44px;
+      align-items: center
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.25;
+      font-weight: 800;
+      color: var(--black)
+    }
+
+    .hero p {
+      margin: 18px 0 28px;
+      color: var(--muted);
+      max-width: 30em;
+      font-size: 18px
+    }
+
+    .btn {
+      display: inline-block;
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: transform .15s, background .15s
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #E6C556, var(--gold) 55%, var(--gold-deep));
+      color: var(--black);
+      padding: 15px 34px;
+      font-size: 18px;
+      box-shadow: 0 8px 22px rgba(212, 175, 55, .35)
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px)
+    }
+
+    .hero-img {
+      position: relative;
+      border-radius: 200px 200px 24px 24px;
+      overflow: hidden;
+      border: 1px solid var(--gold);
+      aspect-ratio: 4/5;
+      background: #efe6cf
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    /* Packs */
+    section {
+      padding: 56px 0
+    }
+
+    .sec-title {
+      text-align: center;
+      margin-bottom: 36px
+    }
+
+    .sec-title h2 {
+      font-size: clamp(26px, 3.6vw, 36px);
+      font-weight: 800;
+      color: var(--black)
+    }
+
+    .sec-title p {
+      color: var(--muted);
+      margin-top: 6px
+    }
+
+    .rule {
+      width: 64px;
+      height: 3px;
+      background: var(--gold);
+      margin: 14px auto 0;
+      border-radius: 2px
+    }
+
+    .packs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px
+    }
+
+    .pack {
+      position: relative;
+      background: var(--ivory);
+      border: 1.5px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color .2s, box-shadow .2s
+    }
+
+    .pack.selected {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, .28), 0 14px 34px rgba(0, 0, 0, .08)
+    }
+
+    .pack .img {
+      aspect-ratio: 1/1;
+      background: #f3ead3;
+      overflow: hidden
+    }
+
+    .pack .img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .pack .body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1
+    }
+
+    .pack h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.4
+    }
+
+    .pack .desc {
+      color: var(--muted);
+      font-size: 15px;
+      flex: 1
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--gold-deep)
+    }
+
+    .price small {
+      font-size: 16px;
+      font-weight: 700;
+      margin-inline-start: 4px
+    }
+
+    .badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--black);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 13.5px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      z-index: 2
+    }
+
+    .pick {
+      width: 100%;
+      padding: 13px;
+      border-radius: 12px;
+      font-size: 16.5px;
+      background: var(--black);
+      color: var(--gold)
+    }
+
+    .pick:hover {
+      background: #26210f
+    }
+
+    .pack.selected .pick {
+      background: var(--gold);
+      color: var(--black)
+    }
+
+    /* Trust */
+    .trust {
+      background: var(--black);
+      color: #fff
+    }
+
+    .trust .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px
+    }
+
+    .t-item {
+      text-align: center;
+      padding: 8px 10px
+    }
+
+    .t-item svg {
+      width: 44px;
+      height: 44px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.6;
+      margin-bottom: 12px
+    }
+
+    .t-item h3 {
+      color: var(--gold);
+      font-size: 19px;
+      margin-bottom: 4px
+    }
+
+    .t-item p {
+      color: #d9d2bf;
+      font-size: 15.5px
+    }
+
+    /* Form */
+    .order {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--ivory);
+      border: 1px solid var(--gold);
+      border-radius: 24px;
+      padding: 32px 28px;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, .07)
+    }
+
+    .field {
+      margin-bottom: 16px
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-size: 15.5px
+    }
+
+    input,
+    select {
+      width: 100%;
+      font-family: inherit;
+      font-size: 16.5px;
+      padding: 13px 14px;
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--ink)
+    }
+
+    input:focus,
+    select:focus {
+      border-color: var(--gold);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, .25)
+    }
+
+    input[readonly] {
+      background: #FBF4DD;
+      font-weight: 700
+    }
+
+    .field.invalid input {
+      border-color: var(--err)
+    }
+
+    .err {
+      display: none;
+      color: var(--err);
+      font-size: 14px;
+      margin-top: 4px
+    }
+
+    .field.invalid .err {
+      display: block
+    }
+
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FBF4DD;
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin: 6px 0 18px;
+      font-weight: 700
+    }
+
+    .summary b {
+      color: var(--gold-deep);
+      font-size: 22px
+    }
+
+    .submit {
+      width: 100%;
+      padding: 17px;
+      font-size: 20px
+    }
+
+    .submit[disabled] {
+      opacity: .65;
+      cursor: wait
+    }
+
+    .form-msg {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #FCE9E7;
+      color: var(--err);
+      font-size: 15px
+    }
+
+    .note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 12px
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      padding: 18px 6px
+    }
+
+    .success .tick {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #E6C556, var(--gold-deep));
+      display: grid;
+      place-items: center
+    }
+
+    .success .tick svg {
+      width: 38px;
+      height: 38px;
+      stroke: var(--black);
+      fill: none;
+      stroke-width: 3
+    }
+
+    .success h3 {
+      font-size: 26px;
+      color: var(--black);
+      margin-bottom: 8px
+    }
+
+    .success p {
+      color: var(--muted)
+    }
+
+    .order.done form {
+      display: none
+    }
+
+    .order.done .success {
+      display: block
+    }
+
+    footer {
+      background: var(--black);
+      color: #bdb59f;
+      text-align: center;
+      padding: 26px 16px;
+      font-size: 14.5px
+    }
+
+    footer b {
+      color: var(--gold);
+      direction: ltr;
+      unicode-bidi: isolate
+    }
+
+    @media(max-width:860px) {
+      .hero .wrap {
+        grid-template-columns: 1fr;
+        text-align: center
+      }
+
+      .hero p {
+        margin-inline: auto
+      }
+
+      .hero-img {
+        max-width: 380px;
+        margin: 0 auto;
+        order: -1
+      }
+
+      .packs,
+      .trust .grid {
+        grid-template-columns: 1fr
+      }
+
+      .packs {
+        max-width: 440px;
+        margin: 0 auto
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        transition: none !important;
+        scroll-behavior: auto !important
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="topbar">توصيل مجاني لجميع مدن المغرب + الدفع بعد معاينة المنتج</div>
+  <div class="topbar">توصيل مجاني لجميع مدن المغرب + الدفع بعد معاينة المنتج</div>
 
-<header class="main">
-  <div class="wrap"><div class="logo">Bichou <span>Accessories</span></div></div>
-</header>
-
-<main>
-  <section class="hero" style="padding-bottom:20px">
+  <header class="main">
     <div class="wrap">
-      <div>
-        <h1>لمعة الذهب التي تليق بإطلالتك</h1>
-        <p>إكسسوارات بلاكيور فاخرة بتصاميم أنيقة، تحافظ على لمعانها ولونها الذهبي يوماً بعد يوم.</p>
-        <a href="#packs" class="btn btn-gold">اكتشفي الباكات</a>
-      </div>
-      <div class="hero-img"><img data-img="hero" alt="مجوهرات ذهبية فاخرة" loading="eager"></div>
+      <div class="logo">Bichou <span>Accessories</span></div>
     </div>
-  </section>
+  </header>
 
-  <section id="packs">
-    <div class="wrap">
-      <div class="sec-title">
-        <h2>اختاري باكك المفضل</h2>
-        <p>اضغطي على «اختاري هذا الباك» وسيتم تعبئة طلبك تلقائياً</p>
-        <div class="rule"></div>
+  <main>
+    <section class="hero" style="padding-bottom:20px">
+      <div class="wrap">
+        <div>
+          <h1>لمعة الذهب التي تليق بإطلالتك</h1>
+          <p>إكسسوارات بلاكيور فاخرة بتصاميم أنيقة، تحافظ على لمعانها ولونها الذهبي يوماً بعد يوم.</p>
+          <a href="#packs" class="btn btn-gold">اكتشفي الباكات</a>
+        </div>
+        <div class="hero-img"><img data-img="hero" alt="مجوهرات ذهبية فاخرة" loading="eager"></div>
       </div>
-      <div class="packs" id="packList"></div>
-    </div>
-  </section>
+    </section>
 
-  <section class="trust">
-    <div class="wrap grid">
-      <div class="t-item">
-        <svg viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></svg>
-        <h3>بلاكيور مضمون</h3><p>مقاوم للصدأ ولا يتغير لونه مع الاستعمال اليومي.</p>
+    <section id="packs">
+      <div class="wrap">
+        <div class="sec-title">
+          <h2>اختاري باكك المفضل</h2>
+          <p>اضغطي على «اختاري هذا الباك» وسيتم تعبئة طلبك تلقائياً</p>
+          <div class="rule"></div>
+        </div>
+        <div class="packs" id="packList"></div>
       </div>
-      <div class="t-item">
-        <svg viewBox="0 0 48 48"><path d="M4 12h25v20H4zM29 20h9l6 7v5H29z"/><circle cx="14" cy="35" r="4"/><circle cx="36" cy="35" r="4"/></svg>
-        <h3>توصيل مجاني وسريع</h3><p>لكافة المدن المغربية، بدون أي مصاريف إضافية.</p>
-      </div>
-      <div class="t-item">
-        <svg viewBox="0 0 48 48"><path d="M8 14h32v24H8z"/><path d="M8 14l16 13 16-13"/></svg>
-        <h3>معاينة وتبديل مريح</h3><p>عاينتي طلبك عند الاستلام وبدّليه بكل سهولة.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="order">
-    <div class="wrap">
-      <div class="sec-title">
-        <h2>أكملي طلبك الآن</h2>
-        <p>املئي المعلومات وسنتصل بك لتأكيد الطلب. الدفع عند الاستلام.</p>
-        <div class="rule"></div>
-      </div>
-
-      <div class="order" id="orderBox">
-        <form id="orderForm" novalidate>
-          <div class="field" data-f="fullname">
-            <label for="fullname">الاسم الكامل</label>
-            <input id="fullname" name="fullname" type="text" autocomplete="name" placeholder="مثال: فاطمة الزهراء">
-            <div class="err">المرجو إدخال الاسم الكامل.</div>
-          </div>
-          <div class="field" data-f="phone">
-            <label for="phone">رقم الهاتف</label>
-            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06XXXXXXXX" dir="ltr" style="text-align:right">
-            <div class="err">أدخلي رقماً مغربياً صحيحاً (مثال: 0612345678).</div>
-          </div>
-          <div class="field" data-f="city">
-            <label for="city">المدينة</label>
-            <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="مثال: الدار البيضاء">
-            <div class="err">المرجو إدخال المدينة.</div>
-          </div>
-          <div class="field" data-f="address">
-            <label for="address">العنوان</label>
-            <input id="address" name="address" type="text" autocomplete="street-address" placeholder="الحي، الشارع، رقم المنزل">
-            <div class="err">المرجو إدخال العنوان الكامل.</div>
-          </div>
-          <div class="field" data-f="selected_pack">
-            <label for="selected_pack">الموديل المختار</label>
-            <input id="selected_pack" name="selected_pack" type="text" readonly placeholder="اختاري باكاً من الأعلى">
-            <div class="err">المرجو اختيار باك من قسم المنتجات.</div>
-          </div>
-          <div class="summary"><span>المجموع (التوصيل مجاني)</span><b id="totalView">— DH</b></div>
-          <button type="submit" class="btn btn-gold submit" id="submitBtn">أطلبي الآن - الدفع عند الاستلام</button>
-          <div class="form-msg" id="formMsg" role="alert"></div>
-          <p class="note">لن يُطلب منك أي دفع الآن. تدفعين بعد معاينة المنتج.</p>
-        </form>
-
-        <div class="success" id="successBox" role="status" aria-live="polite">
-          <div class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-          <h3>تم استلام طلبك بنجاح</h3>
-          <p>شكراً لثقتك في Bichou Accessories. سنتصل بك قريباً على رقمك لتأكيد الطلب وموعد التوصيل.</p>
+    <section class="trust">
+      <div class="wrap grid">
+        <div class="t-item">
+          <svg viewBox="0 0 48 48">
+            <path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z" />
+            <path d="M17 24l5 5 9-10" />
+          </svg>
+          <h3>بلاكيور مضمون</h3>
+          <p>مقاوم للصدأ ولا يتغير لونه مع الاستعمال اليومي.</p>
+        </div>
+        <div class="t-item">
+          <svg viewBox="0 0 48 48">
+            <path d="M4 12h25v20H4zM29 20h9l6 7v5H29z" />
+            <circle cx="14" cy="35" r="4" />
+            <circle cx="36" cy="35" r="4" />
+          </svg>
+          <h3>توصيل مجاني وسريع</h3>
+          <p>لكافة المدن المغربية، بدون أي مصاريف إضافية.</p>
+        </div>
+        <div class="t-item">
+          <svg viewBox="0 0 48 48">
+            <path d="M8 14h32v24H8z" />
+            <path d="M8 14l16 13 16-13" />
+          </svg>
+          <h3>معاينة وتبديل مريح</h3>
+          <p>عاينتي طلبك عند الاستلام وبدّليه بكل سهولة.</p>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer>© <span id="yr"></span> <b>Bichou Accessories</b> · جميع الحقوق محفوظة</footer>
+    <section id="order">
+      <div class="wrap">
+        <div class="sec-title">
+          <h2>أكملي طلبك الآن</h2>
+          <p>املئي المعلومات وسنتصل بك لتأكيد الطلب. الدفع عند الاستلام.</p>
+          <div class="rule"></div>
+        </div>
 
-<script>
-/* ============ إعدادات يمكنك تعديلها ============ */
-// ضعي هنا رابط الـ Webhook الخاص بك من Make.com
-const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/PUT_YOUR_WEBHOOK_ID_HERE";
+        <div class="order" id="orderBox">
+          <form id="orderForm" novalidate>
+            <div class="field" data-f="fullname">
+              <label for="fullname">الاسم الكامل</label>
+              <input id="fullname" name="fullname" type="text" autocomplete="name" placeholder="مثال: فاطمة الزهراء">
+              <div class="err">المرجو إدخال الاسم الكامل.</div>
+            </div>
+            <div class="field" data-f="phone">
+              <label for="phone">رقم الهاتف</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06XXXXXXXX"
+                dir="ltr" style="text-align:right">
+              <div class="err">أدخلي رقماً مغربياً صحيحاً (مثال: 0612345678).</div>
+            </div>
+            <div class="field" data-f="city">
+              <label for="city">المدينة</label>
+              <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="مثال: الدار البيضاء">
+              <div class="err">المرجو إدخال المدينة.</div>
+            </div>
+            <div class="field" data-f="address">
+              <label for="address">العنوان</label>
+              <input id="address" name="address" type="text" autocomplete="street-address"
+                placeholder="الحي، الشارع، رقم المنزل">
+              <div class="err">المرجو إدخال العنوان الكامل.</div>
+            </div>
+            <div class="field" data-f="selected_pack">
+              <label for="selected_pack">الموديل المختار</label>
+              <input id="selected_pack" name="selected_pack" type="text" readonly placeholder="اختاري باكاً من الأعلى">
+              <div class="err">المرجو اختيار باك من قسم المنتجات.</div>
+            </div>
+            <div class="summary"><span>المجموع (التوصيل مجاني)</span><b id="totalView">— DH</b></div>
+            <button type="submit" class="btn btn-gold submit" id="submitBtn">أطلبي الآن - الدفع عند الاستلام</button>
+            <div class="form-msg" id="formMsg" role="alert"></div>
+            <p class="note">لن يُطلب منك أي دفع الآن. تدفعين بعد معاينة المنتج.</p>
+          </form>
 
-// الصور: يمكنك استبدال الروابط بصور متجرك الخاصة
-const IMAGES = {
-  hero:  "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80",
-  pack1: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
-  pack2: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
-  pack3: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80"
-};
+          <div class="success" id="successBox" role="status" aria-live="polite">
+            <div class="tick"><svg viewBox="0 0 24 24">
+                <path d="M5 12.5l4.5 4.5L19 7.5" />
+              </svg></div>
+            <h3>تم استلام طلبك بنجاح</h3>
+            <p>شكراً لثقتك في Bichou Accessories. سنتصل بك قريباً على رقمك لتأكيد الطلب وموعد التوصيل.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-const PACKS = [
-  { id:"pack1", name:"طقم الإطلالة الملوكية", price:199, badge:"الأكثر طلباً",
-    desc:"طقم ذهبي متكامل بتصميم ملوكي يمنحك حضوراً لافتاً في كل مناسبة." },
-  { id:"pack2", name:"طقم الهدية المميز (خاتم + سلسلة + أسورة)", price:149, badge:"",
-    desc:"ثلاث قطع متناسقة في علبة أنيقة، هدية مثالية لمن تحبين." },
-  { id:"pack3", name:"تشكيلة التخزام وفينيسيون الذهب", price:199, badge:"",
-    desc:"تشكيلة مستوحاة من التراث المغربي بلمسة ذهبية عصرية." }
-];
-/* =============================================== */
+  <footer>© <span id="yr"></span> <b>Bichou Accessories</b> · جميع الحقوق محفوظة</footer>
 
-const $ = (s, r=document) => r.querySelector(s);
-let selected = null;
+  <script>
+    /* ============ إعدادات يمكنك تعديلها ============ */
+    // ضعي هنا رابط الـ Webhook الخاص بك من Make.com
+    const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/l72mxm01vqt3cgod1126nw84aml4s4ds";
 
-// صورة بديلة أنيقة في حال تعذّر تحميل الصورة
-const FALLBACK = "data:image/svg+xml;utf8," + encodeURIComponent(
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#F3EAD3"/>' +
-  '<g fill="none" stroke="#D4AF37" stroke-width="6"><circle cx="200" cy="215" r="70"/><circle cx="200" cy="215" r="48"/>' +
-  '<path d="M200 145l-22-34 22-14 22 14z"/></g></svg>');
-function setImg(img, src){ img.onerror = () => { img.onerror = null; img.src = FALLBACK; }; img.src = src; }
+    // الصور: يمكنك استبدال الروابط بصور متجرك الخاصة
+    const IMAGES = {
+      hero: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80",
+      pack1: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+      pack2: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
+      pack3: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80"
+    };
 
-// بناء بطاقات الباكات
-const list = $("#packList");
-PACKS.forEach(p => {
-  const el = document.createElement("article");
-  el.className = "pack"; el.dataset.id = p.id;
-  el.innerHTML =
-    (p.badge ? `<div class="badge">${p.badge}</div>` : "") +
-    `<div class="img"><img alt="${p.name}" loading="lazy"></div>` +
-    `<div class="body"><h3>${p.name}</h3><p class="desc">${p.desc}</p>` +
-    `<div class="price">${p.price}<small>DH</small></div>` +
-    `<button type="button" class="btn pick">اختاري هذا الباك</button></div>`;
-  setImg($("img", el), IMAGES[p.id]);
-  $(".pick", el).addEventListener("click", () => selectPack(p.id, true));
-  list.appendChild(el);
-});
-setImg($('[data-img="hero"]'), IMAGES.hero);
-$("#yr").textContent = new Date().getFullYear();
+    const PACKS = [
+      {
+        id: "pack1", name: "طقم الإطلالة الملوكية", price: 199, badge: "الأكثر طلباً",
+        desc: "طقم ذهبي متكامل بتصميم ملوكي يمنحك حضوراً لافتاً في كل مناسبة."
+      },
+      {
+        id: "pack2", name: "طقم الهدية المميز (خاتم + سلسلة + أسورة)", price: 149, badge: "",
+        desc: "ثلاث قطع متناسقة في علبة أنيقة، هدية مثالية لمن تحبين."
+      },
+      {
+        id: "pack3", name: "تشكيلة التخزام وفينيسيون الذهب", price: 199, badge: "",
+        desc: "تشكيلة مستوحاة من التراث المغربي بلمسة ذهبية عصرية."
+      }
+    ];
+    /* =============================================== */
 
-function selectPack(id, scroll){
-  selected = PACKS.find(p => p.id === id);
-  document.querySelectorAll(".pack").forEach(c => {
-    const on = c.dataset.id === id;
-    c.classList.toggle("selected", on);
-    $(".pick", c).textContent = on ? "تم اختيار هذا الباك ✓" : "اختاري هذا الباك";
-  });
-  $("#selected_pack").value = selected.name;
-  $("#totalView").textContent = selected.price + " DH";
-  $('[data-f="selected_pack"]').classList.remove("invalid");
-  if (scroll) $("#order").scrollIntoView({behavior:"smooth", block:"start"});
-}
+    const $ = (s, r = document) => r.querySelector(s);
+    let selected = null;
 
-// التحقق من البيانات
-function validate(d){
-  const phone = d.phone.replace(/[\s.\-()]/g, "");
-  const rules = {
-    fullname: d.fullname.trim().length >= 3,
-    phone: /^(?:\+212|00212|0)[5-7]\d{8}$/.test(phone),
-    city: d.city.trim().length >= 2,
-    address: d.address.trim().length >= 5,
-    selected_pack: !!selected
-  };
-  let ok = true;
-  Object.entries(rules).forEach(([k, v]) => {
-    $(`[data-f="${k}"]`).classList.toggle("invalid", !v);
-    if (!v) ok = false;
-  });
-  return ok;
-}
+    // صورة بديلة أنيقة في حال تعذّر تحميل الصورة
+    const FALLBACK = "data:image/svg+xml;utf8," + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#F3EAD3"/>' +
+      '<g fill="none" stroke="#D4AF37" stroke-width="6"><circle cx="200" cy="215" r="70"/><circle cx="200" cy="215" r="48"/>' +
+      '<path d="M200 145l-22-34 22-14 22 14z"/></g></svg>');
+    function setImg(img, src) { img.onerror = () => { img.onerror = null; img.src = FALLBACK; }; img.src = src; }
 
-// الإرسال: يتم فقط عند الضغط على الزر (وليس عند تحميل الصفحة)
-$("#orderForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const msg = $("#formMsg"); msg.style.display = "none";
-  const form = e.target;
-  const raw = {
-    fullname: form.fullname.value, phone: form.phone.value,
-    city: form.city.value, address: form.address.value
-  };
-  if (!validate(raw)) {
-    const firstBad = document.querySelector(".field.invalid input");
-    if (firstBad) firstBad.focus();
-    return;
-  }
-  if (MAKE_WEBHOOK_URL.includes("PUT_YOUR_WEBHOOK_ID_HERE")) {
-    msg.textContent = "لم يتم ضبط رابط Webhook بعد. عدّلي المتغير MAKE_WEBHOOK_URL داخل الكود.";
-    msg.style.display = "block"; return;
-  }
-
-  const payload = {
-    fullname: raw.fullname.trim(),
-    phone: raw.phone.replace(/[\s.\-()]/g, ""),
-    city: raw.city.trim(),
-    address: raw.address.trim(),
-    selected_pack: selected.name,
-    total_price: selected.price
-  };
-
-  const btn = $("#submitBtn"); const label = btn.textContent;
-  btn.disabled = true; btn.textContent = "جارٍ إرسال طلبك...";
-  try {
-    const res = await fetch(MAKE_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+    // بناء بطاقات الباكات
+    const list = $("#packList");
+    PACKS.forEach(p => {
+      const el = document.createElement("article");
+      el.className = "pack"; el.dataset.id = p.id;
+      el.innerHTML =
+        (p.badge ? `<div class="badge">${p.badge}</div>` : "") +
+        `<div class="img"><img alt="${p.name}" loading="lazy"></div>` +
+        `<div class="body"><h3>${p.name}</h3><p class="desc">${p.desc}</p>` +
+        `<div class="price">${p.price}<small>DH</small></div>` +
+        `<button type="button" class="btn pick">اختاري هذا الباك</button></div>`;
+      setImg($("img", el), IMAGES[p.id]);
+      $(".pick", el).addEventListener("click", () => selectPack(p.id, true));
+      list.appendChild(el);
     });
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    $("#orderBox").classList.add("done");
-    $("#successBox").scrollIntoView({behavior:"smooth", block:"center"});
-  } catch (err) {
-    console.error(err);
-    msg.textContent = "تعذّر إرسال الطلب. تأكدي من اتصالك بالإنترنت وحاولي مرة أخرى.";
-    msg.style.display = "block";
-    btn.disabled = false; btn.textContent = label;
-  }
-});
+    setImg($('[data-img="hero"]'), IMAGES.hero);
+    $("#yr").textContent = new Date().getFullYear();
 
-// إزالة رسالة الخطأ أثناء الكتابة
-document.querySelectorAll("#orderForm input").forEach(i =>
-  i.addEventListener("input", () => i.closest(".field").classList.remove("invalid")));
-</script>
+    function selectPack(id, scroll) {
+      selected = PACKS.find(p => p.id === id);
+      document.querySelectorAll(".pack").forEach(c => {
+        const on = c.dataset.id === id;
+        c.classList.toggle("selected", on);
+        $(".pick", c).textContent = on ? "تم اختيار هذا الباك ✓" : "اختاري هذا الباك";
+      });
+      $("#selected_pack").value = selected.name;
+      $("#totalView").textContent = selected.price + " DH";
+      $('[data-f="selected_pack"]').classList.remove("invalid");
+      if (scroll) $("#order").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    // التحقق من البيانات
+    function validate(d) {
+      const phone = d.phone.replace(/[\s.\-()]/g, "");
+      const rules = {
+        fullname: d.fullname.trim().length >= 3,
+        phone: /^(?:\+212|00212|0)[5-7]\d{8}$/.test(phone),
+        city: d.city.trim().length >= 2,
+        address: d.address.trim().length >= 5,
+        selected_pack: !!selected
+      };
+      let ok = true;
+      Object.entries(rules).forEach(([k, v]) => {
+        $(`[data-f="${k}"]`).classList.toggle("invalid", !v);
+        if (!v) ok = false;
+      });
+      return ok;
+    }
+
+    // الإرسال: يتم فقط عند الضغط على الزر (وليس عند تحميل الصفحة)
+    $("#orderForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const msg = $("#formMsg"); msg.style.display = "none";
+      const form = e.target;
+      const raw = {
+        fullname: form.fullname.value, phone: form.phone.value,
+        city: form.city.value, address: form.address.value
+      };
+      if (!validate(raw)) {
+        const firstBad = document.querySelector(".field.invalid input");
+        if (firstBad) firstBad.focus();
+        return;
+      }
+      if (MAKE_WEBHOOK_URL.includes("PUT_YOUR_WEBHOOK_ID_HERE")) {
+        msg.textContent = "لم يتم ضبط رابط Webhook بعد. عدّلي المتغير MAKE_WEBHOOK_URL داخل الكود.";
+        msg.style.display = "block"; return;
+      }
+
+      const payload = {
+        fullname: raw.fullname.trim(),
+        phone: raw.phone.replace(/[\s.\-()]/g, ""),
+        city: raw.city.trim(),
+        address: raw.address.trim(),
+        selected_pack: selected.name,
+        total_price: selected.price
+      };
+
+      const btn = $("#submitBtn"); const label = btn.textContent;
+      btn.disabled = true; btn.textContent = "جارٍ إرسال طلبك...";
+      try {
+        const res = await fetch(MAKE_WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        $("#orderBox").classList.add("done");
+        $("#successBox").scrollIntoView({ behavior: "smooth", block: "center" });
+      } catch (err) {
+        console.error(err);
+        msg.textContent = "تعذّر إرسال الطلب. تأكدي من اتصالك بالإنترنت وحاولي مرة أخرى.";
+        msg.style.display = "block";
+        btn.disabled = false; btn.textContent = label;
+      }
+    });
+
+    // إزالة رسالة الخطأ أثناء الكتابة
+    document.querySelectorAll("#orderForm input").forEach(i =>
+      i.addEventListener("input", () => i.closest(".field").classList.remove("invalid")));
+  </script>
 </body>
+
 </html>
