@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>حذاء جلد طبيعي للرجال - توصيل مجاني والدفع عند الاستلام</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #161210;
+            --brown: #3a2418;
+            --brown-soft: #6b4a36;
+            --gold: #b8893a;
+            --gold-light: #e3c58a;
+            --line: #e8e1d8;
+            --bg: #fff;
+            --cream: #faf6ef;
+            --ok: #2f7d4f;
+            --err: #b3261e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Cairo', Tahoma, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.7;
+            padding-bottom: 76px;
+            -webkit-text-size-adjust: 100%
+        }
+
+        .wrap {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 16px
+        }
+
+        /* Announcement bar */
+        .announce {
+            background: var(--ink);
+            color: var(--gold-light);
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 9px 12px
+        }
+
+        /* Hero */
+        .hero {
+            padding: 18px 0 8px;
+            text-align: center
+        }
+
+        .hero-img {
+            aspect-ratio: 1/1;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #f3ece1, #e6d9c5);
+            border: 2px dashed var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brown-soft);
+            font-weight: 700;
+            overflow: hidden
+        }
+
+        .hero-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
+
+        .hero h1 {
+            font-size: 27px;
+            font-weight: 900;
+            line-height: 1.35;
+            color: var(--brown);
+            margin: 18px 0 8px
+        }
+
+        .hero p {
+            color: var(--brown-soft);
+            font-size: 15px
+        }
+
+        .offer {
+            display: flex;
+            gap: 10px;
+            margin: 18px 0 6px
+        }
+
+        .offer div {
+            flex: 1;
+            border: 1.5px solid var(--gold);
+            border-radius: 14px;
+            padding: 12px 6px;
+            background: var(--cream)
+        }
+
+        .offer div.best {
+            background: var(--brown);
+            border-color: var(--brown);
+            color: #fff;
+            position: relative
+        }
+
+        .offer small {
+            display: block;
+            font-size: 13px;
+            font-weight: 600
+        }
+
+        .offer strong {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--gold)
+        }
+
+        .offer .best strong {
+            color: var(--gold-light)
+        }
+
+        .offer .tag {
+            position: absolute;
+            top: -11px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 1px 10px;
+            border-radius: 20px;
+            white-space: nowrap
+        }
+
+        /* Buttons */
+        .btn {
+            display: block;
+            width: 100%;
+            border: 0;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 900;
+            font-size: 19px;
+            color: #fff;
+            background: linear-gradient(180deg, #c99a46, #a87727);
+            border-radius: 14px;
+            padding: 16px 12px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(168, 119, 39, .35)
+        }
+
+        .btn:disabled {
+            opacity: .6;
+            cursor: not-allowed;
+            animation: none
+        }
+
+        .pulse {
+            animation: pulse 1.6s infinite
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(184, 137, 58, .65)
+            }
+
+            70% {
+                box-shadow: 0 0 0 16px rgba(184, 137, 58, 0)
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(184, 137, 58, 0)
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 30px 0 6px
+        }
+
+        h2 {
+            font-size: 21px;
+            font-weight: 900;
+            color: var(--brown);
+            text-align: center;
+            margin-bottom: 16px
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 46px;
+            height: 3px;
+            background: var(--gold);
+            margin: 6px auto 0;
+            border-radius: 2px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .feat {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 16px 10px;
+            text-align: center;
+            background: #fff
+        }
+
+        .feat svg {
+            width: 34px;
+            height: 34px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            margin-bottom: 6px
+        }
+
+        .feat b {
+            display: block;
+            font-size: 15px;
+            color: var(--brown)
+        }
+
+        .feat span {
+            font-size: 12.5px;
+            color: var(--brown-soft);
+            line-height: 1.5;
+            display: block
+        }
+
+        /* Order card */
+        .order {
+            background: var(--cream);
+            border: 1px solid var(--gold-light);
+            border-radius: 18px;
+            padding: 18px 14px;
+            margin-top: 8px
+        }
+
+        .qty {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 14px
+        }
+
+        .pair {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 12px
+        }
+
+        .pair h3 {
+            font-size: 15px;
+            color: var(--brown);
+            margin-bottom: 8px
+        }
+
+        .label {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 8px 0 6px;
+            display: block
+        }
+
+        .choices {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .choice {
+            position: relative
+        }
+
+        .choice input {
+            position: absolute;
+            opacity: 0;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            margin: 0
+        }
+
+        .choice span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-width: 46px;
+            height: 44px;
+            padding: 0 12px;
+            border: 1.5px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+            font-weight: 700;
+            font-size: 16px;
+            transition: .15s
+        }
+
+        .choice input:checked+span {
+            background: var(--ink);
+            color: var(--gold-light);
+            border-color: var(--ink)
+        }
+
+        .choice input:focus-visible+span {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px
+        }
+
+        .dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, .25)
+        }
+
+        .qty .choice {
+            flex: 1
+        }
+
+        .qty .choice span {
+            height: auto;
+            padding: 10px 6px;
+            flex-direction: column;
+            gap: 0;
+            line-height: 1.4;
+            font-size: 14px
+        }
+
+        .qty .choice b {
+            color: var(--gold);
+            font-size: 20px
+        }
+
+        .qty .choice input:checked+span b {
+            color: var(--gold-light)
+        }
+
+        .field {
+            margin-bottom: 12px
+        }
+
+        .field label {
+            display: block;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 5px
+        }
+
+        .field input,
+        .field textarea {
+            width: 100%;
+            font-family: inherit;
+            font-size: 16px;
+            padding: 13px 12px;
+            border: 1.5px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+            color: var(--ink)
+        }
+
+        .field input:focus,
+        .field textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(184, 137, 58, .2)
+        }
+
+        .field input[type=tel] {
+            direction: ltr;
+            text-align: right
+        }
+
+        .field.invalid input,
+        .field.invalid textarea {
+            border-color: var(--err)
+        }
+
+        .msg {
+            color: var(--err);
+            font-size: 12.5px;
+            display: none;
+            margin-top: 3px
+        }
+
+        .field.invalid .msg {
+            display: block
+        }
+
+        .summary {
+            background: #fff;
+            border: 1px dashed var(--gold);
+            border-radius: 12px;
+            padding: 12px;
+            margin: 6px 0 14px;
+            font-size: 14px
+        }
+
+        .summary div {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 2px 0
+        }
+
+        .summary .total {
+            border-top: 1px solid var(--line);
+            margin-top: 6px;
+            padding-top: 8px;
+            font-weight: 900;
+            font-size: 17px;
+            color: var(--brown)
+        }
+
+        .summary .total em {
+            font-style: normal;
+            color: var(--gold)
+        }
+
+        .trust {
+            text-align: center;
+            font-size: 12.5px;
+            color: var(--brown-soft);
+            margin-top: 10px
+        }
+
+        .error-box {
+            display: none;
+            background: #fdecea;
+            color: var(--err);
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: center
+        }
+
+        /* Thank you */
+        .thanks {
+            display: none;
+            text-align: center;
+            background: #fff;
+            border: 2px solid var(--gold);
+            border-radius: 18px;
+            padding: 30px 18px;
+            margin-top: 8px
+        }
+
+        .thanks .check {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: var(--ok);
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .thanks .check svg {
+            width: 34px;
+            height: 34px;
+            stroke: #fff;
+            fill: none;
+            stroke-width: 3.5;
+            stroke-linecap: round;
+            stroke-linejoin: round
+        }
+
+        .thanks h3 {
+            font-size: 22px;
+            color: var(--brown);
+            margin-bottom: 8px
+        }
+
+        .thanks p {
+            color: var(--brown-soft);
+            font-size: 15px
+        }
+
+        .thanks .recap {
+            margin-top: 14px;
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 10px;
+            font-size: 14px;
+            color: var(--ink)
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #8a7d72;
+            padding: 26px 0 10px
+        }
+
+        /* Sticky CTA */
+        .sticky {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 20;
+            background: #fff;
+            border-top: 1px solid var(--line);
+            padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px))
+        }
+
+        .sticky .btn {
+            max-width: 448px;
+            margin: 0 auto;
+            font-size: 17px;
+            padding: 13px
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+            .pulse {
+                animation: none
+            }
+
+            html {
+                scroll-behavior: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="announce">🚚 توصيل مجاني لجميع المدن + الدفع بعد معاينة المنتج</div>
+
+    <main class="wrap">
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-img">
+                <!-- بدّل هذا السطر بصورتك: <img src="shoe.jpg" alt="حذاء جلد رجالي"> -->
+                <span>مكان الصورة الرئيسية للحذاء</span>
+            </div>
+            <h1>الأناقة اللي كتبان فيك<br>تبدا من حذاء جلد طبيعي 100%</h1>
+            <p>حذاء رجالي بجلد أصلي، مريح للمشي الطويل ومصنوع ليدوم سنين.</p>
+
+            <div class="offer">
+                <div><small>حذاء واحد</small><strong>280</strong> <small>درهم</small></div>
+                <div class="best"><span class="tag">وفّر 40 درهم</span><small>حذاءين</small><strong>520</strong>
+                    <small>درهم</small>
+                </div>
+            </div>
+            <a href="#order" class="btn pulse" style="margin-top:14px">اطلب الآن</a>
+        </header>
+
+        <!-- Features -->
+        <section>
+            <h2>علاش هاد الحذاء؟</h2>
+            <div class="grid">
+                <div class="feat">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17l-5.9 3 1.2-6.5L2.5 8.9 9.1 8z" />
+                    </svg>
+                    <b>جلد طبيعي 100%</b><span>جلد أصلي يتنفس ويتحسن مع الاستعمال</span>
+                </div>
+                <div class="feat">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                    </svg>
+                    <b>راحة فائقة</b><span>خفيف ومرن، تلبسو النهار كامل بلا تعب</span>
+                </div>
+                <div class="feat">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z" />
+                        <path d="M9 12l2 2 4-4" />
+                    </svg>
+                    <b>سوميلة طبية</b><span>تدعم القدم والظهر وتمنع الألم</span>
+                </div>
+                <div class="feat">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 21l9-9" />
+                        <path d="M12.2 6.2L17 11l4-4-4.8-4.8z" />
+                        <path d="M5 19l2-.5 9-9-1.5-1.5-9 9z" />
+                    </svg>
+                    <b>خياطة يدوية متينة</b><span>تفصيل حرفي مغربي ما يتفكش بسهولة</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order -->
+        <section id="order">
+            <h2>اطلب حذاءك دابا</h2>
+
+            <div class="order" id="orderBox">
+                <form id="orderForm" novalidate>
+
+                    <span class="label" style="margin-top:0">اختر العرض</span>
+                    <div class="qty">
+                        <label class="choice"><input type="radio" name="qty" value="1" checked><span>حذاء واحد<b>280
+                                    د</b></span></label>
+                        <label class="choice"><input type="radio" name="qty" value="2"><span>حذاءين (وفّر 40)<b>520
+                                    د</b></span></label>
+                    </div>
+
+                    <div id="pairs"></div>
+
+                    <div class="field"><label for="name">الاسم الكامل</label>
+                        <input id="name" name="fullname" type="text" autocomplete="name"
+                            placeholder="مثال: يوسف العلوي">
+                        <div class="msg">المرجو إدخال الاسم الكامل</div>
+                    </div>
+
+                    <div class="field"><label for="phone">رقم الهاتف</label>
+                        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                            placeholder="06XXXXXXXX">
+                        <div class="msg">أدخل رقم مغربي صحيح (مثال: 0612345678)</div>
+                    </div>
+
+                    <div class="field"><label for="city">المدينة</label>
+                        <input id="city" name="city" type="text" list="cities" autocomplete="address-level2"
+                            placeholder="مثال: الدار البيضاء">
+                        <datalist id="cities">
+                            <option value="الدار البيضاء">
+                            <option value="الرباط">
+                            <option value="مراكش">
+                            <option value="فاس">
+                            <option value="طنجة">
+                            <option value="أكادير">
+                            <option value="مكناس">
+                            <option value="وجدة">
+                            <option value="القنيطرة">
+                            <option value="تطوان">
+                            <option value="سلا">
+                            <option value="المحمدية">
+                            <option value="تمارة">
+                            <option value="الجديدة">
+                            <option value="سطات">
+                        </datalist>
+                        <div class="msg">المرجو إدخال المدينة</div>
+                    </div>
+
+                    <div class="field"><label for="address">العنوان الكامل</label>
+                        <textarea id="address" name="address" rows="2" autocomplete="street-address"
+                            placeholder="الحي، الشارع، رقم المنزل"></textarea>
+                        <div class="msg">المرجو إدخال العنوان</div>
+                    </div>
+
+                    <div class="summary" id="summary" aria-live="polite"></div>
+
+                    <div class="error-box" id="errorBox">وقع خطأ أثناء إرسال الطلب. المرجو إعادة المحاولة.</div>
+
+                    <button type="submit" class="btn pulse" id="submitBtn">أطلب الآن - الدفع عند الاستلام</button>
+                    <p class="trust">🔒 معلوماتك آمنة · توصيل مجاني · الدفع بعد المعاينة</p>
+                </form>
+
+                <!-- Thank you -->
+                <div class="thanks" id="thanks" role="status">
+                    <div class="check"><svg viewBox="0 0 24 24">
+                            <path d="M5 12.5l4.5 4.5L19 7.5" />
+                        </svg></div>
+                    <h3>شكراً لك، تم استلام طلبك!</h3>
+                    <p>طلبك قيد المعالجة دابا. غادي يتصل بك أحد موظفينا في أقرب وقت لتأكيد الطلب وموعد التوصيل.</p>
+                    <div class="recap" id="recap"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>© جميع الحقوق محفوظة</footer>
+    </main>
+
+    <div class="sticky" id="stickyBar"><a href="#order" class="btn">اطلب الآن - الدفع عند الاستلام</a></div>
+
+    <script>
+        // ====== الإعدادات ======
+        const WEBHOOK_URL = "https://hook.eu1.make.com/l72mxm01vqt3cgod1126nw84aml4s4ds";
+        const PRICES = { 1: 280, 2: 520 };
+        const SIZES = [39, 40, 41, 42, 43, 44, 45];
+        const COLORS = [
+            { name: "أسود", hex: "#161210" },
+            { name: "بني", hex: "#6b3f22" }
+        ];
+
+        const $ = (s, r = document) => r.querySelector(s);
+        const form = $("#orderForm");
+        const pairsBox = $("#pairs");
+
+        function pairHTML(i) {
+            const sizes = SIZES.map((s, k) =>
+                `<label class="choice"><input type="radio" name="size${i}" value="${s}" ${k === 3 ? "checked" : ""}><span>${s}</span></label>`).join("");
+            const colors = COLORS.map((c, k) =>
+                `<label class="choice"><input type="radio" name="color${i}" value="${c.name}" ${k === 0 ? "checked" : ""}><span><i class="dot" style="background:${c.hex}"></i>${c.name}</span></label>`).join("");
+            return `<div class="pair">
+      <h3>${i === 1 ? "الحذاء الأول" : "الحذاء الثاني"}</h3>
+      <span class="label">المقاس</span><div class="choices">${sizes}</div>
+      <span class="label">اللون</span><div class="choices">${colors}</div>
+    </div>`;
+        }
+
+        function getQty() { return +form.qty.value; }
+
+        function renderPairs() {
+            const q = getQty();
+            // حفظ الاختيارات الحالية
+            const keep = {};
+            pairsBox.querySelectorAll("input:checked").forEach(el => keep[el.name] = el.value);
+            pairsBox.innerHTML = Array.from({ length: q }, (_, k) => pairHTML(k + 1)).join("");
+            Object.entries(keep).forEach(([n, v]) => {
+                const el = pairsBox.querySelector(`input[name="${n}"][value="${v}"]`);
+                if (el) el.checked = true;
+            });
+            updateSummary();
+        }
+
+        function getItems() {
+            return Array.from({ length: getQty() }, (_, k) => ({
+                size: form["size" + (k + 1)].value,
+                color: form["color" + (k + 1)].value
+            }));
+        }
+
+        function updateSummary() {
+            const items = getItems();
+            const rows = items.map((it, k) =>
+                `<div><span>حذاء ${k + 1}</span><b>المقاس ${it.size} · ${it.color}</b></div>`).join("");
+            $("#summary").innerHTML = rows +
+                `<div><span>التوصيل</span><b style="color:var(--ok)">مجاني</b></div>` +
+                `<div class="total"><span>المجموع</span><em>${PRICES[getQty()]} درهم</em></div>`;
+        }
+
+        form.addEventListener("change", e => {
+            if (e.target.name === "qty") renderPairs(); else updateSummary();
+        });
+
+        // ====== التحقق ======
+        function setInvalid(id, bad) {
+            $("#" + id).closest(".field").classList.toggle("invalid", bad);
+            return bad;
+        }
+        function validate() {
+            const phone = form.phone.value.replace(/[\s.\-]/g, "");
+            const phoneOk = /^(?:\+212|00212|0)[5-7]\d{8}$/.test(phone);
+            const bad = [
+                setInvalid("name", form.fullname.value.trim().length < 3),
+                setInvalid("phone", !phoneOk),
+                setInvalid("city", form.city.value.trim().length < 2),
+                setInvalid("address", form.address.value.trim().length < 5)
+            ];
+            return !bad.some(Boolean);
+        }
+
+        // ====== الإرسال ======
+        form.addEventListener("submit", async e => {
+            e.preventDefault();
+            $("#errorBox").style.display = "none";
+            if (!validate()) {
+                const first = form.querySelector(".invalid input, .invalid textarea");
+                if (first) first.focus();
+                return;
+            }
+
+            const items = getItems();
+            const qty = getQty();
+
+            // تجميع المقاس واللون: قيمة مباشرة لحذاء واحد، ونص مجمّع لحذاءين
+            const shoe_size = qty === 1
+                ? items[0].size
+                : items.map((it, k) => `حذاء ${k + 1}: (${it.size})`).join(" | ");
+            const shoe_color = qty === 1
+                ? items[0].color
+                : items.map((it, k) => `حذاء ${k + 1}: (${it.color})`).join(" | ");
+
+            const payload = {
+                fullname: form.fullname.value.trim(),
+                phone: form.phone.value.trim(),
+                city: form.city.value.trim(),
+                address: form.address.value.trim(),
+                shoe_size,
+                shoe_color,
+                total_price: PRICES[qty]
+            };
+
+            const btn = $("#submitBtn");
+            const oldText = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = "جاري إرسال الطلب...";
+
+            try {
+                const res = await fetch(WEBHOOK_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+                if (!res.ok) throw new Error("HTTP " + res.status);
+
+                form.style.display = "none";
+                $("#stickyBar").style.display = "none";
+                $("#recap").innerHTML =
+                    items.map((it, k) => `حذاء ${k + 1}: المقاس ${it.size} · ${it.color}`).join("<br>") +
+                    `<br><b>المجموع: ${payload.total_price} درهم - الدفع عند الاستلام</b>`;
+                $("#thanks").style.display = "block";
+                $("#thanks").scrollIntoView({ behavior: "smooth", block: "center" });
+            } catch (err) {
+                console.error(err);
+                $("#errorBox").style.display = "block";
+                btn.disabled = false;
+                btn.textContent = oldText;
+            }
+        });
+
+        renderPairs();
+    </script>
+</body>
+
+</html>
